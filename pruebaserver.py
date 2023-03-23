@@ -9,8 +9,8 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 mycursor.execute('SELECT * FROM respuestas WHERE ID_Respuesta=2')
 resultado = mycursor.fetchone()
-valor_respuesta=resultado[1]
-print(valor_respuesta)
+
+print(resultado[1])
 
 
 #print('Hola', ['hola', 'klk', 'saludos', 'buenas'], single_response = True)
