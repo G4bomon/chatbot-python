@@ -45,14 +45,14 @@ def check_all_messages(message):
 
         mycursor = mydb.cursor()
         guayaba=1
-        mycursor.execute('SELECT * FROM respuestas WHERE ID_Respuesta = %s', (guayaba,))
+        mycursor.execute('SELECT * FROM respuestas WHERE id = %s', (guayaba,))
         resultado = mycursor.fetchone()
         mycursor.execute('SELECT * FROM respuestas')
         resultados = mycursor.fetchall()
             
 
         for resultado in resultados:
-            response(resultado[1], [resultado[2],resultado[3],resultado[4]], single_response = resultado[5], required_words=[resultado[6]])
+            response(resultado[1], [resultado[2],resultado[3],resultado[4],resultado[5],resultado[6],resultado[7], resultado[8],resultado[9],resultado[10],resultado[11]], single_response = resultado[12], required_words=[resultado[13]])
             guayaba += 1
 
         
