@@ -1,0 +1,19 @@
+import mysql.connector
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="preguntas",
+    port=3306
+)
+mycursor = mydb.cursor()
+guayaba = 1
+mycursor.execute('SELECT * FROM respuestas WHERE ID_Respuesta = %s', (guayaba,))
+resultado = mycursor.fetchone()
+mycursor.execute('SELECT * FROM respuestas')
+resultados = mycursor.fetchall()
+prueba=1
+
+for resultado in resultados:
+    print(resultado[2])
+    guayaba += 1

@@ -1,5 +1,6 @@
 import mysql.connector
 import nltk
+nltk.download()
 from nltk.tokenize import word_tokenize
 mydb = mysql.connector.connect(
     host="localhost",
